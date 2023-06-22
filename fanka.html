@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fanka Store</title>
+  <style>
+    /* Styles untuk tampilan produk */
+     body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+    .product {
+      border: 1px solid black;
+      padding: 10px;
+      margin: 10px;
+      display: inline-block;
+      width: 200px;
+      height: 250px;
+      text-align: center;
+      vertical-align: top;
+    }
+
+    .product img {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 10px;
+    }
+
+    .product h3 {
+      margin: 0;
+    } 
+
+    .product p {
+      margin: 5px 0;
+    }
+
+    .product button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    .product button:hover {
+      background-color: #3e8e41;
+    }
+
+    /* Styles untuk tampilan keranjang belanja */
+    .cart {
+      border: 1px solid black;
+      padding: 10px;
+      margin: 10px;
+      display: inline-block;
+      width: 400px;
+      height: 300px;
+      text-align: center;
+      vertical-align: top;
+    }
+
+    .cart h2 {
+      margin-top: 0;
+    }
+
+    .cart-item {
+      margin: 10px;
+      text-align: left;
+    }
+
+    .cart-item p {
+      margin: 5px 0;
+    }
+
+    .cart-total {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    /* Styles untuk tampilan checkout */
+    .checkout {
+      border: 1px solid black;
+      padding: 10px;
+      margin: 10px;
+      display: inline-block;
+      width: 400px;
+      height: 200px;
+      text-align: center;
+      vertical-align: top;
+    }
+
+    .checkout h2 {
+      margin-top: 0;
+    }
+
+    .checkout p {
+      margin: 10px;
+    }
+
+    .checkout button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    .checkout button:hover {
+      background-color: #3e8e41;
+    }
+  </style>
+  </head>
+<body>
+  <h1>Fanka Store</h1>
+  <p> Selamat datang di Fanka Store!!! Selamat berbelanja, yang ga belanja dimusuhin!</p>
+  <p> Contact Person : 0812345678 (Farah) </p>
+  <body style= "background-color:whitesmoke;">
+
+  <!-- Tampilkan daftar produk -->
+  <div id="products">
+    <div class="product">
+      <img src="https://www.xtremejackets.com/wp-content/uploads/2019/07/mens-slim-fit-cafe-racer-distressed-brown-leather-motorcycle-jacket-b.jpg">
+      <h3>Jaket Leather</h3>
+      <p>Rp 356.000</p>
+      <button onclick="addToCart('Jaket Leather', 356000)">Tambah ke Keranjang</button>
+    </div>
+    <div class="product">
+      <img src="https://i.pinimg.com/originals/45/73/dd/4573dd1840c1d6e51bec1655ac1176d2.jpg">
+      <h3>Jeans Selvedge</h3>
+      <p>Rp 300.000</p>
+      <button onclick="addToCart('Jeans Selvedge', 300000)">Tambah ke Keranjang</button>
+    </div>
+    <div class="product">
+      <img src="https://s2.bukalapak.com/img/7647297051/w-1000/Sepatu_Boots_Docmart_Dr_Martens_pria_wanita_8_lubang__hole__.png">
+      <h3>Sepatu Docmart</h3>
+      <p>Rp 400.000</p>
+      <button onclick="addToCart('Sepatu Docmart', 400000)">Tambah ke Keranjang</button>
+    </div>
+    <div class="product">
+      <img src="http://www.bagswish.com/3876/leather-bags-men-leather-clutch-bag.jpg">
+      <h3>Handbag</h3>
+      <p>Rp 275.000</p>
+      <button onclick="addToCart('Handbag', 275000)">Tambah ke Keranjang</button>
+    </div>
+    </div>
+    <div class="product">
+      <img src="https://s2.bukalapak.com/img/7691533772/w-1000/MODEL_TERBARU_TAS_PUNGGUNG_RANSEL_BACKPACK_PRIA_COWOK_LAKI_K.jpg">
+      <h3>Backpack</h3>
+      <p>Rp 560.000</p>
+      <button onclick="addToCart('Backpack', 560000)">Tambah ke Keranjang</button>
+    </div>
+    </div>
+    <div class="product">
+      <img src="https://i.pinimg.com/736x/ee/53/1c/ee531ce5e6d8759320942ec7b1016afb.jpg">
+      <h3>Shoulder Bag</h3>
+      <p>Rp 525.000</p>
+      <button onclick="addToCart('Shoulder Bag', 525000)">Tambah ke Keranjang</button>
+    </div>
+      <div class="product">
+      <img src="https://assets.tokodistributor.com/product/e547df72d49ac292a116240799affe5a.jpg!prdetail">
+      <h3>Wallet</h3>
+      <p>Rp 230.000</p>
+      <button onclick="addToCart('Wallet', 230000)">Tambah ke Keranjang</button>
+    </div>
+      <div class="product">
+      <img src="https://s2.bukalapak.com/img/7836723731/w-1000/Ripcurl_2701_Jam_Tangan_Pria_Kulit_R1_IndoGrosir.jpg">
+      <h3>Watch</h3>
+      <p>Rp 600.000</p>
+      <button onclick="addToCart('Watch', 20)">Tambah ke Keranjang</button>
+    </div>
+ </div>
+
+  <div id="cart">
+    <h2>Keranjang Belanja</h2>
+    <table>
+      <tr>
+        <th>Item</th>
+        <th>Harga</th>
+      </tr>
+    </table>
+
+    <div id="total">
+      <strong>Total:</strong> Rp 0
+    </div>
+  </div>
+     <script>
+    // JavaScript untuk penjualan makanan
+
+    // Variabel global untuk menyimpan keranjang belanja
+    var cartItems = [];
+
+    // Fungsi untuk menambahkan item ke keranjang belanja
+    function addToCart(item, price) {
+      cartItems.push({ item: item, price: price });
+      updateCart();
+    }
+
+    // Fungsi untuk memperbarui tampilan keranjang belanja
+    function updateCart() {
+      var cartTable = document.querySelector("#cart table");
+      var cartTotal = document.querySelector("#total");
+
+      // Hapus semua baris item sebelum memperbarui
+      while (cartTable.rows.length > 1) {
+        cartTable.deleteRow(1);
+      }
+
+      // Tambahkan item ke baris baru dalam tabel
+      for (var i = 0; i < cartItems.length; i++) {
+        var row = cartTable.insertRow();
+        var itemCell = row.insertCell(0);
+        var priceCell = row.insertCell(1);
+
+        itemCell.innerHTML = cartItems[i].item;
+        priceCell.innerHTML = "Rp " + cartItems[i].price;
+      }
+
+      // Hitung total harga
+      var total = 0;
+      for (var j = 0; j < cartItems.length; j++) {
+        total += cartItems[j].price;
+      }
+
+      cartTotal.innerHTML = "<strong>Total:</strong> Rp " + total;
+    }
+  </script>
+</body>
+</html>
